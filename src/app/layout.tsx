@@ -1,6 +1,9 @@
+import Header from '@/components/Header';
 import '../styles/globals.css'
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
+import Footer from '@/components/Footer';
+import { usePathname } from 'next/navigation';
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -14,9 +17,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" className='scroll-smooth'>
       <body className={`${montserrat.variable} root font-montserrat`}>
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   )

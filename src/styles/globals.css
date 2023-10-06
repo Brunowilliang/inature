@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .root {
-  @apply bg-[#232E26]
+  @apply bg-[#232E26];
 }
 
 .bg-pattern {

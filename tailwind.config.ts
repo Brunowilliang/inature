@@ -1,12 +1,12 @@
-import type { Config } from 'tailwindcss'
-const defaultTheme = require('tailwindcss/defaultTheme')
-
-const config: Config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  darkMode: ["class"],
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
+	],
   theme: {
     extend: {
       colors: {
@@ -16,15 +16,28 @@ const config: Config = {
         secondary: '#D9EFDE',
         secondaryDark: '#B0D4B7',
         secondaryLight: '#F2F9F5',
-        // ...defaultTheme.colors,
       },
       fontFamily: {
         montserrat: 'var(--font-montserrat)',
       },
+      keyframes: {
+        "accordion-down": {
+          from: { height: 0 },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: 0 },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+      },
     },
   },
   plugins: [
-    require("tailwind-scrollbar-hide"),
+    require("tailwindcss-animate"),
+    require("tailwind-scrollbar-hide")
   ],
 }
-export default config

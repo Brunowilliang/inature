@@ -22,7 +22,7 @@ export default function CardPromotion({
   height
 }: CardPromotionProps) {
   return (
-    <div className="bg-secondary w-72 h-full flex flex-col items-center rounded-lg shadow-lg p-4">
+    <div className="bg-secondary h-full flex flex-col items-center rounded-lg shadow-lg p-4">
       <p className="text-xl font-bold  text-primary">
         {promotionTitle}
       </p>

@@ -16,7 +16,7 @@ export default function CardNatural({
   height
 }: CardNaturalProps) {
   return (
-    <div className="bg-secondary w-72 h-full flex flex-col items-center rounded-lg shadow-lg p-4">
+    <div className="bg-secondary flex flex-col items-center rounded-lg shadow-lg p-4">
       <Image
         src={image}
         alt={title}
