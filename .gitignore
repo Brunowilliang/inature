@@ -1,0 +1,38 @@
+# Dependências
+/node_modules
+
+# Arquivos de configuração do editor de código
+.vscode
+.idea
+
+# Arquivos de Lock
+yarn.lock
+package-lock.json
+bun.lockb
+
+# Build
+.next
+out
+
+# Arquivos de configuração de ambiente
+.env
+.env.local
+.env.*.local
+.env.test
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Sistema Operacional
+.DS_Store
+Thumbs.db
+
+# Diretórios de cache
+.cache
+.next/cache
+
+# Outros
+*.pem
+*.cert
