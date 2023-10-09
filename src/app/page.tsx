@@ -304,7 +304,7 @@ export default function Home() {
         >
           <SwiperSlide>
             <CardPromotion
-              image="/assets/frascos/12-frascoss.png"
+              image="/assets/frascos/12-frascos.png"
               promotionTitle="12 meses de tratamento"
               paymentPlan="até 12x de"
               monthlyPrice="R$ 69,70"
@@ -313,7 +313,7 @@ export default function Home() {
           </SwiperSlide>
           <SwiperSlide>
             <CardPromotion
-              image="/assets/frascos/5-frascoss.png"
+              image="/assets/frascos/5-frascos.png"
               promotionTitle="5 meses de tratamento"
               paymentPlan="até 12x de"
               monthlyPrice="R$ 39,70"
