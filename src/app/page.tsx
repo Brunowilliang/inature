@@ -36,7 +36,7 @@ export default function Home() {
           A solução completa para o diabetes
           </h4>
           <Image
-            src="/assets/frascos/5-Frascos.png"
+            src="/assets/frascos/5-frascos.png"
             alt="Glicovit"
             width={500}
             height={500}
