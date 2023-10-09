@@ -1,7 +1,6 @@
 'use client'
 import CardNatural from "@/components/CardNatural";
 import CardPromotion from "@/components/CardPromotion";
-import Header from "@/components/Header";
 import { Button } from "@/components/ui/Button";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -22,7 +21,7 @@ export default function Home() {
   return (
     <>
       {/* Initital */}
-      <main className="flex h-screen w-full items-center justify-center">
+      <main className="flex h-[100svh] w-full items-center justify-center">
         <div className="bg-pattern pt-20 flex flex-col items-center justify-center w-full h-full text-center text-secondary px-4">
           <Image
             src="/assets/logo-glicovit.png"
@@ -181,7 +180,7 @@ export default function Home() {
       {/* section 4 - composição */}
       <div id="composicao" className="bg-pattern py-20 flex flex-col gap-5 items-center justify-center w-full h-full text-center text-secondary px-4">
         <h1 className="text-2xl font-bold">
-          Única fórmula que combate as<br/>Moléculas DB7
+          Única fórmula que combate<br/>as Moléculas DB7
         </h1>
         <Button variant="secondary">
           Quero vencer o diabetes
