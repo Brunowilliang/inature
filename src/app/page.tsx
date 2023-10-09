@@ -9,8 +9,16 @@ import "swiper/css";
 import { Mousewheel, Pagination } from "swiper/modules";
 import CardSick from "@/components/CardSick";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import useMediaQuery from "@/components/useMediaQuery";
 
 export default function Home() {
+  const isFullScreen = useMediaQuery('(min-width:1024px)');
+  const isLargeScreen = useMediaQuery('(min-width:768px)');
+  const isMediumScreen = useMediaQuery('(min-width:640px)');
+  const isSmallScreen = useMediaQuery('(min-width:480px)');
+
+  const slidesPerView = isFullScreen ? 4 : isLargeScreen ? 3 : isMediumScreen ? 2 : isSmallScreen ? 1.5 : 1.5;
+
   return (
     <>
       {/* Initital */}
@@ -41,17 +49,17 @@ export default function Home() {
         </div>
       </main>
 
-      {/* Section 2 */}
-      <section className="w-full p-4">
+      {/* Section 2 - Melhorias */}
+      <section className="w-full max-w-2xl mx-auto p-4">
         <div className="flex flex-col gap-10 bg-secondary w-full h-full py-10 rounded-2xl">
-          <h1 className="px-6 text-center leading-8 text-3xl font-bold text-primary">
-            Veja as melhorias que o GlicoVIT pode fazer na sua vida!
+          <h1 className="px-6 text-center leading-8 text-2xl font-bold text-primary">
+            Veja as melhorias que o GlicoVIT<br/>pode fazer na sua vida!
           </h1>
 
           <Swiper
             className="w-full"
             spaceBetween={10}
-            slidesPerView={1.2}
+            slidesPerView={1.4}
             centeredSlides={true}
             modules={[Mousewheel, Pagination]}
             mousewheel={true}
@@ -154,9 +162,9 @@ export default function Home() {
       </section>
 
 
-      {/* section 3 */}
+      {/* section 3 - Beneficios */}
       <section id="beneficios" className="h-[60vh] flex flex-col items-center text-center justify-center gap-5 text-secondary">
-        <h1 className="text-3xl font-bold">
+        <h1 className="text-2xl font-bold">
           Benefícios
         </h1>
         <ul className="text-md space-y-1">
@@ -170,9 +178,9 @@ export default function Home() {
         </ul>
       </section>
 
-      {/* section 4 */}
+      {/* section 4 - composição */}
       <div id="composicao" className="bg-pattern py-20 flex flex-col gap-5 items-center justify-center w-full h-full text-center text-secondary px-4">
-        <h1 className="text-3xl font-bold">
+        <h1 className="text-2xl font-bold">
           Única fórmula que combate as<br/>Moléculas DB7
         </h1>
         <Button variant="secondary">
@@ -183,12 +191,12 @@ export default function Home() {
       {/* section 5 */}
       <section className="py-20 flex flex-col text-center gap-10">
         <h3 className="text-2xl font-bold text-secondary">
-        Descubra os ativos naturais que irão deixar sua glicose estável
+        Descubra os ativos naturais<br/>que irão deixar sua glicose estável
         </h3>
         <Swiper
           className="w-screen"
           spaceBetween={20}
-          slidesPerView={1.4}
+          slidesPerView={slidesPerView}
           centeredSlides={true}
           modules={[Mousewheel, Pagination]}
           mousewheel={true}
@@ -226,38 +234,13 @@ export default function Home() {
             />
           </SwiperSlide>
         </Swiper>
-        {/* <div className="flex gap-4 snap-x px-6 scrollbar-hide overflow-x-auto">
-          <div className="snap-center">
-          </div>
-          <div className="snap-center">
-            <CardNatural
-              image="/assets/ingredientes/coenzima.png"
-              title="Coenzima Q10"
-              description="A coenzima Q10 é uma substância natural que pode trazer benefícios significativos para pessoas com diabetes. Além de ajudar na produção de energia celular, ela também possui propriedades antioxidantes que combatem o estresse oxidativo, reduzindo os danos causados pelo excesso de açúcar no sangue."
-            />
-          </div>
-          <div className="snap-center">
-            <CardNatural
-              image="/assets/ingredientes/magnesio.png"
-              title="Magnésio"
-              description="Este mineral oferece uma ajuda decisiva no processo de absorção da glicose do sangue para as células. Deste modo, aumentando a sensibilidade das células à insulina, o aporte adequado deste nutriente mineral pode desempenhar uma função vital para o bem-estar de quem sofre de diabetes tipo 2."
-            />
-          </div>
-          <div className="snap-center">
-            <CardNatural
-              image="/assets/ingredientes/oleo.png"
-              title="Óleo de Persêa"
-              description="O óleo da semente da persêa americana é benéfico para pessoas com diabetes, ajudando a controlar o açúcar no sangue e reduzindo o risco de doenças cardiovasculares. Muito confundido com óleo de abacate, a somente da persêa é muito mais rica em ácidos graxos saudáveis e é uma opção poderosa contra a Glicose descontrolada."
-            />
-          </div>
-        </div> */}
       </section>
 
 
       {/* section 6 */}
       <section className="bg-pattern py-20 flex flex-col gap-5 items-center justify-center w-full h-full text-center text-secondary px-4">
         <h1 className="text-2xl font-bold">
-          O poder ativo que elimine<br/>por completo as<br/>moléculas DB7 do corpo
+          O poder ativo que elimine por completo<br/>as moléculas DB7 do corpo
         </h1>
         <Button variant="secondary">
           Quero vencer o diabetes
@@ -305,15 +288,15 @@ export default function Home() {
         </Button>
       </section>
 
-      {/* section 8 */}
+      {/* section 8 - ofertas */}
       <section id="ofertas" className="py-20 flex flex-col text-center gap-10">
         <h3 className="text-2xl font-bold text-secondary">
-        Escolha 5 meses para melhores resultados!
+        Escolha 5 meses para<br/>melhores resultados!
         </h3>
         <Swiper
           className="w-screen"
           spaceBetween={20}
-          slidesPerView={1.4}
+          slidesPerView={slidesPerView}
           centeredSlides={true}
           modules={[Mousewheel, Pagination]}
           mousewheel={true}
@@ -359,27 +342,29 @@ export default function Home() {
       </section>
 
       {/* section 9 */}
-      <section className="bg-pattern py-20 flex flex-col gap-5 items-center justify-center w-full h-full text-center text-secondary px-4">
-        <h1 className="text-2xl font-bold">
-          Único com garantia real<br/>de 90 dias!
-        </h1>
-        <h4 className="text-base">
-          Confiamos tanto na qualidade e no resultado de nosso produto que damos a todos os nossos clientes garantia de 90 dias!
-        </h4>
-        <h4 className="text-base">
-          Use por 3 meses e veja as mudanças. Se você não ficar satisfeito, devolvemos 100% de  seu dinheiro na hora!
-        </h4>
-        <Button variant="secondary">
-          Quero vencer o diabetes
-        </Button>
+      <section className="bg-pattern py-20 w-full h-full text-center text-secondary px-4">
+        <div className="flex flex-col gap-5 items-center justify-center w-full max-w-xl mx-auto">
+          <h1 className="text-2xl font-bold">
+            Único com garantia real<br/>de 90 dias!
+          </h1>
+          <h4 className="text-base">
+            Confiamos tanto na qualidade e no resultado de nosso produto que damos a todos os nossos clientes garantia de 90 dias!
+          </h4>
+          <h4 className="text-base">
+            Use por 3 meses e veja as mudanças. Se você não ficar satisfeito, devolvemos 100% de  seu dinheiro na hora!
+          </h4>
+          <Button variant="secondary" className="mt-5">
+            Quero vencer o diabetes
+          </Button>
+        </div>
       </section>
 
-      {/* section 10 */}
-      <section id="faq" className="flex flex-col gap-10 items-center justify-center py-20">
+      {/* section 10 - faq */}
+      <section id="faq" className="flex flex-col w-full gap-10 items-center justify-center px-10 py-20">
         <h1 className="text-2xl text-secondary text-center font-bold">
           Perguntas Frequentes
         </h1>
-        <Accordion type="single" collapsible className="w-screen px-10">
+        <Accordion type="single" collapsible className="w-full max-w-2xl mx-auto">
           <AccordionItem value="item-1">
             <AccordionTrigger>
               O que é o GlicoVIT?

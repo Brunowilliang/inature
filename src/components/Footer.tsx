@@ -8,12 +8,9 @@ export default function Footer() {
       <div className="bg-pattern flex flex-col gap-5 items-center justify-center pt-20 pb-3">
         <h1 className="text-2xl font-bold text-secondary">iNature</h1>
 
-      <div className='flex flex-col items-center gap-2'>
+      <div className='flex flex-col md:flex-row items-center gap-3 md:gap-6'>
         <Link href='/politica-de-privacidade' className="text-base text-secondary">
           Política de Privacidade
-        </Link>
-        <Link href='/termos-e-condicoes'className="text-base text-secondary">
-          Termos e Condições
         </Link>
         <Link href='/politica-de-troca-e-devolucao'
         className="text-base text-secondary">

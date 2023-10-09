@@ -3,7 +3,6 @@ import '../styles/globals.css'
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
 import Footer from '@/components/Footer';
-import { usePathname } from 'next/navigation';
 
 const montserrat = Montserrat({
   subsets: ["latin"],

@@ -23,8 +23,8 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed bg-transparent w-full z-30">
-        <div className="flex h-24  p-4">
+      <header className="fixed bg-transparent w-full max-w-3xl mx-auto left-0 right-0 z-30">
+        <div className="flex h-24 p-4">
           <div className='flex items-center justify-between px-6 w-full h-full rounded-full bg-secondary'>
             <Link href='/' className='hover:opacity-80'>
               <h1 className="text-2xl font-bold text-primary">iNature</h1>
