@@ -1,10 +1,10 @@
 'use client'
 import React, { useState } from 'react'
-import DropdownMenu from './DropdownMenu'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/20/solid'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import DropdownMenu from './DropdownMenu'
 
 
 const HomeLinks = [

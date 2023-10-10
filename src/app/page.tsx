@@ -9,6 +9,9 @@ import { Mousewheel, Pagination } from "swiper/modules";
 import CardSick from "@/components/CardSick";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import useMediaQuery from "@/components/useMediaQuery";
+import Counter from "@/components/ui/Counter";
+import { List, ListIcon, ListItem } from "@chakra-ui/react";
+import { MdCheckCircle } from 'react-icons/md'
 
 export default function Home() {
   const isFullScreen = useMediaQuery('(min-width:1024px)');
@@ -162,11 +165,44 @@ export default function Home() {
 
 
       {/* section 3 - Beneficios */}
-      <section id="beneficios" className="h-[60vh] flex flex-col items-center text-center justify-center gap-5 text-secondary">
-        <h1 className="text-2xl font-bold">
-          Benefícios
+      <section id="beneficios" className="h-[60vh] max-w-3xl mx-auto px-4 flex flex-col items-center text-center justify-center text-secondary">
+        <h1 className="text-2xl text-secondary font-bold">
+          Benefícios do GlicoVIT
         </h1>
-        <ul className="text-md space-y-1">
+        <h4 className="text-lg font-medium text-secondary pb-10 pt-4">
+          Enfrentar o diabetes com os recursos certos pode fazer toda a diferença. Nossos benefícios direcionados oferecem suporte em áreas cruciais para proporcionar um alívio duradouro e promover um estilo de vida mais saudável.
+        </h4>
+        <List spacing={3} fontWeight={'medium'}>
+          <ListItem>
+            <ListIcon as={MdCheckCircle} boxSize={5} color='secondary' />
+            Diminui os Picos de Insulina
+          </ListItem>
+          <ListItem>
+            <ListIcon as={MdCheckCircle} boxSize={5} color='secondary' />
+            Acaba com os Enjoôs e Ânsias
+          </ListItem>
+          <ListItem>
+            <ListIcon as={MdCheckCircle} boxSize={5} color='secondary' />
+            Da um fim as Dormências
+          </ListItem>
+          <ListItem>
+            <ListIcon as={MdCheckCircle} boxSize={5} color='secondary' />
+            Ajuda no contro de Fluxo Urinário
+          </ListItem>
+          <ListItem>
+            <ListIcon as={MdCheckCircle} boxSize={5} color='secondary' />
+            Melhora em até 98% a Visão
+          </ListItem>
+          <ListItem>
+            <ListIcon as={MdCheckCircle} boxSize={5} color='secondary' />
+            Acaba com Dores nas Pernas e Mãos
+          </ListItem>
+          <ListItem>
+            <ListIcon as={MdCheckCircle} boxSize={5} color='secondary' />
+            Pode acabar com a dependência de químicos
+          </ListItem>
+        </List>
+        {/* <ul className="text-md space-y-1">
           <li>Diminui os Picos de Insulina</li>
           <li>Acaba com os Enjoôs e Ânsias</li>
           <li>Da um fim as Dormências</li>
@@ -174,7 +210,7 @@ export default function Home() {
           <li>Melhora em até 98% a Visão</li>
           <li>Acaba com Dores nas Pernas e Mãos</li>
           <li>Pode acabar com a dependência de químicos</li>
-        </ul>
+        </ul> */}
       </section>
 
       {/* section 4 - composição */}
@@ -247,44 +283,49 @@ export default function Home() {
       </section>
 
       {/* section 7 */}
-      <section id="testes" className="py-20 flex flex-col gap-5 items-center justify-center w-full h-full text-center text-secondary px-4">
-        <Image
-          src="/assets/frascos/caixa-e-frasco.png"
-          alt="Glicovit"
-          width={400}
-          height={400}
-          quality={100}
-          className="object-cover object-center"
-        />
-        <h1 className="text-2xl font-bold">
-          Testes clínicos do GlicoVIT
-        </h1>
-        <div className="flex flex-col gap-6 pt-5 pb-10">
-          <div className="w-full flex gap-4 text-start items-center justify-center">
-            <p className="text-5xl font-bold">76%</p>
-            <p className="text-3xl font-medium">|</p>
-            <p className="text-base font-semibold">Redução dos<br/>Picos de Insulina</p>
-          </div>
-          <div className="w-full flex gap-4 text-start items-center justify-center">
-            <p className="text-5xl font-bold">81%</p>
-            <p className="text-3xl font-medium">|</p>
-            <p className="text-base font-semibold">Menor Dependência<br/>dos Químicos</p>
-          </div>
-          <div className="w-full flex gap-4 text-start items-center justify-center">
-            <p className="text-5xl font-bold">72%</p>
-            <p className="text-3xl font-medium">|</p>
-            <p className="text-base font-semibold">Melhoria na<br/>Visão</p>
-          </div>
-          <div className="w-full flex gap-4 text-start items-center justify-center">
-            <p className="text-5xl font-bold">84%</p>
-            <p className="text-3xl font-medium">|</p>
-            <p className="text-base font-semibold">Redução de Todos os<br/>Sintomas do Diabetes</p>
-          </div>
-          <p className="text-xs">Liberado pela ANVISA no RDC 240/18</p>
+      <section id="testes" className="py-20 flex flex-col md:flex-row max-w-3xl mx-auto gap-5 items-center justify-center w-full h-full text-center text-secondary px-4">
+        <div>
+          <Image
+            src="/assets/frascos/caixa-e-frasco.png"
+            alt="Glicovit"
+            width={400}
+            height={400}
+            quality={100}
+            className="object-cover object-center"
+          />
         </div>
-        <Button variant="secondary">
-          Quero vencer o diabetes
-        </Button>
+        <div>
+
+          <div className="flex flex-col items-center md:items-start gap-6 pt-5 pb-10">
+            <h1 className="text-2xl font-bold text-center md:text-start">
+              Testes clínicos<br/>do GlicoVIT
+            </h1>
+            <Counter
+              line1="Redução dos"
+              line2="Picos de Insulina"
+              value={76}
+            />
+            <Counter
+              line1="Menor Dependência"
+              line2="dos Químicos"
+              value={81}
+            />
+            <Counter
+              line1="Melhoria"
+              line2="na Visão"
+              value={72}
+            />
+            <Counter
+              line1="Redução de Todos os"
+              line2="Sintomas do Diabetes"
+              value={84}
+            />
+            <p className="text-xs">Liberado pela ANVISA no RDC 240/18</p>
+          </div>
+          <Button variant="secondary">
+            Quero vencer o diabetes
+          </Button>
+        </div>
       </section>
 
       {/* section 8 - ofertas */}
@@ -346,10 +387,10 @@ export default function Home() {
           <h1 className="text-2xl font-bold">
             Único com garantia real<br/>de 90 dias!
           </h1>
-          <h4 className="text-base">
+          <h4 className="text-lg font-medium text-secondary">
             Confiamos tanto na qualidade e no resultado de nosso produto que damos a todos os nossos clientes garantia de 90 dias!
           </h4>
-          <h4 className="text-base">
+          <h4 className="text-lg font-medium text-secondary">
             Use por 3 meses e veja as mudanças. Se você não ficar satisfeito, devolvemos 100% de  seu dinheiro na hora!
           </h4>
           <Button variant="secondary" className="mt-5">

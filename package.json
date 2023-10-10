@@ -9,6 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/icons": "^2.1.1",
+    "@chakra-ui/next-js": "^2.1.5",
+    "@chakra-ui/react": "^2.8.1",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
     "@headlessui/react": "latest",
     "@heroicons/react": "^2.0.18",
     "@radix-ui/react-accordion": "^1.1.2",
@@ -20,7 +25,9 @@
     "next": "13.5.4",
     "next-images": "^1.8.5",
     "react": "^18",
+    "react-countup": "^6.4.2",
     "react-dom": "^18",
+    "react-icons": "^4.11.0",
     "swiper": "^10.3.1",
     "tailwind-merge": "^1.14.0",
     "tailwind-scrollbar-hide": "^1.1.7",
