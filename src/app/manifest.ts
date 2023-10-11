@@ -10,5 +10,12 @@ export default function manifest(): MetadataRoute.Manifest {
     start_url: '/',
     display: 'standalone',
     orientation: 'portrait',
+    icons: [
+      {
+        src: '/icon.png',
+        sizes: 'any',
+        type: 'image/png',
+      },
+    ],
   }
 }
