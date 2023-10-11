@@ -11,8 +11,14 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: 'Dropshipping',
-  description: 'Descrição do site',
+  title: 'iNature - A Solução Completa para o Diabetes',
+  description: 'Descubra o Glicovit no iNature, a solução completa para o diabetes. Diminua os picos de insulina, acabe com os enjoôs, melhore sua visão e muito mais. Experimente por 3 meses com nossa garantia de 90 dias!',
+  keywords: 'iNature, Glicovit, diabetes care, dropshipping, saúde, wellness, online shopping',
+  authors: [{ name: 'iNature', url: 'https://www.inature.com.br' }],  // Substitua com o URL real do seu site
+  generator: 'iNature Generator',
+  applicationName: 'iNature',
+  creator: 'Bruno Garcia',
+  publisher: 'Bruno Garcia',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

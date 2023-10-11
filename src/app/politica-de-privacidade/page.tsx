@@ -146,7 +146,7 @@ export default function Page() {
 
       <p>
         A iNature poderá, em decorrência da legislação em vigor, prestar as informações requeridas pelas autoridades públicas, na forma e periodicidade requerida.
-        Em caso de dúvidas você poderá entrar em contato através do e-mail: suporte@ inature.com
+        Em caso de dúvidas você poderá entrar em contato através do e-mail: suporte@inature.com.br
       </p>
     </div>
   )

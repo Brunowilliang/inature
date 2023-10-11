@@ -23,7 +23,7 @@ export default function Page() {
         <br />
         O pedido esteja em desacordo com o solicitado na loja virtual.
         <br />
-        1.1. Caso o consumidor tenha recusado o recebimento, deverá informar imediatamente através do e-mail: suporte@inature.com, com a recusa e seus motivos para os devidos tratamentos.
+        1.1. Caso o consumidor tenha recusado o recebimento, deverá informar imediatamente através do e-mail: suporte@inature.com.br, com a recusa e seus motivos para os devidos tratamentos.
       </p>
 
       <p>
@@ -35,7 +35,7 @@ export default function Page() {
       </p>
 
       <p>
-        suporte@inature.com, sendo que neste caso, só será aceito o seu pedido de insatisfação com o resultado do produto caso sejam preenchidos os seguintes requisitos:
+        suporte@inature.com.br, sendo que neste caso, só será aceito o seu pedido de insatisfação com o resultado do produto caso sejam preenchidos os seguintes requisitos:
       </p>
 
       <p>
@@ -55,7 +55,7 @@ export default function Page() {
       </p>
 
       <p>
-        Avaria, defeito e divergência: Caso a embalagem ou o produto vier com avarias e/ou defeitos OU caso o produto e/ou embalagem vier divergente ao comprado e isso não tenha sido constatado no momento da entrega para realizar a recusa do recebimento com a devida justificativa atrás da nota fiscal ou do comprovante de entrega explicando o problema, entre em contato com nosso suporte, através do e-mail: suporte@inature.com, dentro do prazo de troca de 7 dias corridos e informe qual a diferença entre o produto que você comprou e do produto recebido. Informe também os dados da etiqueta do produto para os devidos tratamentos.
+        Avaria, defeito e divergência: Caso a embalagem ou o produto vier com avarias e/ou defeitos OU caso o produto e/ou embalagem vier divergente ao comprado e isso não tenha sido constatado no momento da entrega para realizar a recusa do recebimento com a devida justificativa atrás da nota fiscal ou do comprovante de entrega explicando o problema, entre em contato com nosso suporte, através do e-mail: suporte@inature.com.br, dentro do prazo de troca de 7 dias corridos e informe qual a diferença entre o produto que você comprou e do produto recebido. Informe também os dados da etiqueta do produto para os devidos tratamentos.
       </p>
       <p>
         Garantia blindada: Nossa garantia blindada cobre a primeira compra pelo prazo de 30 (trinta) dias corridos a contar do despacho do produto na transportadora, mas as compras subsequentes atenderão o prazo legal de 7 (sete) dias corridos após o recebimento.
@@ -65,7 +65,7 @@ export default function Page() {
       </p>
 
       <p>
-        Avaria, defeito e divergência: Caso a embalagem ou o produto vier com avarias e/ou defeitos OU caso o produto e/ou embalagem vier divergente ao comprado e isso não tenha sido constatado no momento da entrega para realizar a recusa do recebimento com a devida justificativa atrás da nota fiscal ou do comprovante de entrega explicando o problema, entre em contato com nosso suporte, através do e-mail: suporte@inature.com, dentro do prazo de troca de 7 dias corridos e informe qual a diferença entre o produto que você comprou e do produto recebido. Informe também os dados da etiqueta do produto para os devidos tratamentos.
+        Avaria, defeito e divergência: Caso a embalagem ou o produto vier com avarias e/ou defeitos OU caso o produto e/ou embalagem vier divergente ao comprado e isso não tenha sido constatado no momento da entrega para realizar a recusa do recebimento com a devida justificativa atrás da nota fiscal ou do comprovante de entrega explicando o problema, entre em contato com nosso suporte, através do e-mail: suporte@inature.com.br, dentro do prazo de troca de 7 dias corridos e informe qual a diferença entre o produto que você comprou e do produto recebido. Informe também os dados da etiqueta do produto para os devidos tratamentos.
       </p>
       <p>
         Garantia blindada: Nossa garantia blindada cobre a primeira compra pelo prazo de 30 (trinta) dias corridos a contar do despacho do produto na transportadora, mas as compras subsequentes atenderão o prazo legal de 7 (sete) dias corridos após o recebimento.
