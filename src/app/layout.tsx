@@ -21,6 +21,14 @@ export const metadata: Metadata = {
   applicationName: 'iNature',
   creator: 'Bruno Garcia',
   publisher: 'Bruno Garcia',
+  metadataBase: new URL('https://www.inature.com.br'),
+  bookmarks: ['https://www.inature.com.br'],
+  verification: {
+    google: 'google',
+    other: {
+      facebook: ['facebook-domain-verification', '9efesre4sce22omi41vkotqtpdgc9g'],
+    },
+  },
   openGraph: {
     type: 'website',
     url: 'https://www.inature.com.br',
@@ -35,6 +43,19 @@ export const metadata: Metadata = {
     site: '@brunowillian',
     creator: '@brunowillian',
   },
+  // robots: {
+  //   index: true,
+  //   follow: true,
+  //   nocache: true,
+  //   googleBot: {
+  //     index: true,
+  //     follow: true,
+  //     noimageindex: true, 
+  //     'max-video-preview': -1,
+  //     'max-image-preview': 'large',
+  //     'max-snippet': -1,
+  //   },
+  // },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
