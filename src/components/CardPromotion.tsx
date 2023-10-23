@@ -6,6 +6,7 @@ type CardPromotionProps = {
   paymentPlan: string;
   monthlyPrice: string;
   fullPrice: string;
+  bottlePrice?: string;
   image: string;
   width?: number;
   height?: number;
@@ -17,25 +18,38 @@ export default function CardPromotion({
   paymentPlan,
   monthlyPrice,
   fullPrice,
+  bottlePrice,
   image,
   width,
   height,
   onClick
 }: CardPromotionProps) {
   return (
-    <div className="bg-secondary h-full flex flex-col items-center rounded-lg shadow-lg p-4">
+    <div className="bg-secondary relative h-full flex flex-col items-center rounded-lg shadow-lg p-4">
       <p className="text-xl font-bold  text-primary">
         {promotionTitle}
       </p>
-      <Image
-        src={image}
-        alt={promotionTitle}
-        width={width || 150}
-        height={height || 150}
-        quality={100}
-        className="object-cover object-center"
-      />
-      <div className="space-y-1 text-primary">
+      <div className="relative flex items-center justify-center w-full h-full">
+        <Image
+          src={image}
+          alt={promotionTitle}
+          width={width || 250}
+          height={height || 250}
+          quality={100}
+          className="object-cover object-center"
+        />
+        {bottlePrice && (
+          <div className="absolute top-5 right-0 rounded-full px-3 py-2 leading-3 text-xs font-bold bg-primary bg-opacity-90 text-secondary">
+            <p>
+              {bottlePrice}
+            </p>
+            <p>
+              cada frasco
+            </p>
+          </div>
+        )}
+      </div>
+      <div className="-space-y-[2px] text-primary">
         <p className="text-lg font-bold">
           {paymentPlan}
         </p>
@@ -56,6 +70,7 @@ export default function CardPromotion({
           Comprar agora
         </Button>
         <p className="text-sm font-normal pt-2">Compra 100% segura</p>
+        
       </div>
   </div>
 )}

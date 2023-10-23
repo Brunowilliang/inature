@@ -327,7 +327,7 @@ export default function Home() {
       {/* section 8 - ofertas */}
       <section id="ofertas" className="py-20 flex flex-col text-center gap-10">
         <h3 className="text-2xl font-bold text-secondary">
-        Escolha 5 meses para<br/>melhores resultados!
+        Recomendamos de 3 a 8<br/>frascos para melhores resultados!
         </h3>
         <Swiper
           className="w-screen"
@@ -336,6 +336,7 @@ export default function Home() {
           centeredSlides={true}
           modules={[Mousewheel, Pagination]}
           mousewheel={true}
+          watchOverflow={false}
           onSwiper={(swiper) => console.log(swiper)}
         >
           <SwiperSlide>
@@ -345,6 +346,7 @@ export default function Home() {
               paymentPlan="até 12x de"
               monthlyPrice="R$ 69,98"
               fullPrice="R$ 697,00"
+              bottlePrice="R$ 58,00"
               onClick={() => {
                 window.open('https://ev.braip.com/ref?pl=plapjgyn&ck=che0v55n&af=afi1110y54', '_blank');
               }}
@@ -357,6 +359,7 @@ export default function Home() {
               paymentPlan="até 12x de"
               monthlyPrice="R$ 39,86"
               fullPrice="R$ 397,00"
+              bottlePrice="R$ 79,40"
               onClick={() => {
                 window.open('https://ev.braip.com/ref?pl=plamp2pw&ck=che0v55n&af=afi1110y54', '_blank');
               }}
@@ -369,6 +372,7 @@ export default function Home() {
               paymentPlan="até 12x de"
               monthlyPrice="R$ 29,82"
               fullPrice="R$ 297,00"
+              bottlePrice="R$ 99,00"
               onClick={() => {
                 window.open('https://ev.braip.com/ref?pl=plade1er&ck=che0v55n&af=afi1110y54', '_blank');
               }}

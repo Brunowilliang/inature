@@ -5,8 +5,8 @@ import { ComponentProps } from 'react'
 const button = tv({
   base: [
     'px-6 py-3 text-lg font-semibold rounded-full',
-    'hover:opacity-70',
-    'active:opacity-70 ',
+    'hover:opacity-80',
+    'active:scale-[0.98] active:opacity-[0.95]',
     'transition-all duration-350 ease-linear',
   ],
 
