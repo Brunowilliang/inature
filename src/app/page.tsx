@@ -21,6 +21,11 @@ export default function Home() {
 
   const slidesPerView = isFullScreen ? 4 : isLargeScreen ? 3 : isMediumScreen ? 2 : isSmallScreen ? 1.5 : 1.5;
 
+  const goToOffers = () => {
+    const element = document.getElementById('ofertas');
+    element?.scrollIntoView({behavior: 'smooth'});
+  }
+
   return (
     <>
       {/* Initital */}
@@ -45,7 +50,7 @@ export default function Home() {
             quality={100}
             className="object-cover object-center"
           />
-          <Button variant="secondary">
+          <Button variant="secondary" onClick={() => goToOffers()}>
             Quero vencer o diabetes
           </Button>
         </div>
@@ -202,15 +207,6 @@ export default function Home() {
             Pode acabar com a dependência de químicos
           </ListItem>
         </List>
-        {/* <ul className="text-md space-y-1">
-          <li>Diminui os Picos de Insulina</li>
-          <li>Acaba com os Enjoôs e Ânsias</li>
-          <li>Da um fim as Dormências</li>
-          <li>Ajuda no contro de Fluxo Urinário</li>
-          <li>Melhora em até 98% a Visão</li>
-          <li>Acaba com Dores nas Pernas e Mãos</li>
-          <li>Pode acabar com a dependência de químicos</li>
-        </ul> */}
       </section>
 
       {/* section 4 - composição */}
@@ -218,7 +214,7 @@ export default function Home() {
         <h1 className="text-2xl font-bold">
           Única fórmula que combate<br/>as Moléculas DB7
         </h1>
-        <Button variant="secondary">
+        <Button variant="secondary" onClick={() => goToOffers()}>
           Quero vencer o diabetes
         </Button>
       </div>
@@ -277,7 +273,7 @@ export default function Home() {
         <h1 className="text-2xl font-bold">
           O poder ativo que elimine por completo<br/>as moléculas DB7 do corpo
         </h1>
-        <Button variant="secondary">
+        <Button variant="secondary" onClick={() => goToOffers()}>
           Quero vencer o diabetes
         </Button>
       </section>
@@ -322,7 +318,7 @@ export default function Home() {
             />
             <p className="text-xs">Liberado pela ANVISA no RDC 240/18</p>
           </div>
-          <Button variant="secondary">
+          <Button variant="secondary" onClick={() => goToOffers()}>
             Quero vencer o diabetes
           </Button>
         </div>
@@ -344,11 +340,14 @@ export default function Home() {
         >
           <SwiperSlide>
             <CardPromotion
-              image="/assets/frascos/12-frascos.png"
-              promotionTitle="12 meses de tratamento"
+              image="/assets/frascos/10-frascos.png"
+              promotionTitle="10 meses de tratamento"
               paymentPlan="até 12x de"
-              monthlyPrice="R$ 69,70"
+              monthlyPrice="R$ 69,98"
               fullPrice="R$ 697,00"
+              onClick={() => {
+                window.open('https://ev.braip.com/ref?pl=plapjgyn&ck=che0v55n&af=afi1110y54', '_blank');
+              }}
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -356,8 +355,11 @@ export default function Home() {
               image="/assets/frascos/5-frascos.png"
               promotionTitle="5 meses de tratamento"
               paymentPlan="até 12x de"
-              monthlyPrice="R$ 39,70"
+              monthlyPrice="R$ 39,86"
               fullPrice="R$ 397,00"
+              onClick={() => {
+                window.open('https://ev.braip.com/ref?pl=plamp2pw&ck=che0v55n&af=afi1110y54', '_blank');
+              }}
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -365,17 +367,23 @@ export default function Home() {
               image="/assets/frascos/3-frascos.png"
               promotionTitle="3 meses de tratamento"
               paymentPlan="até 12x de"
-              monthlyPrice="R$ 29,70"
+              monthlyPrice="R$ 29,82"
               fullPrice="R$ 297,00"
-            />
+              onClick={() => {
+                window.open('https://ev.braip.com/ref?pl=plade1er&ck=che0v55n&af=afi1110y54', '_blank');
+              }}
+              />
           </SwiperSlide>
           <SwiperSlide>
             <CardPromotion
               image="/assets/frascos/1-frasco.png"
               promotionTitle="1 mês de tratamento"
               paymentPlan="até 12x de"
-              monthlyPrice="R$ 19,70"
-              fullPrice="R$ 227,00"
+              monthlyPrice="R$ 19,78"
+              fullPrice="R$ 197,00"
+              onClick={() => {
+                window.open('https://ev.braip.com/ref?pl=plav2l2r&ck=che0v55n&af=afi1110y54', '_blank');
+              }}
             />
           </SwiperSlide>
         </Swiper>
@@ -393,7 +401,7 @@ export default function Home() {
           <h4 className="text-lg font-medium text-secondary">
             Use por 3 meses e veja as mudanças. Se você não ficar satisfeito, devolvemos 100% de  seu dinheiro na hora!
           </h4>
-          <Button variant="secondary" className="mt-5">
+          <Button variant="secondary" className="mt-5" onClick={() => goToOffers()}>
             Quero vencer o diabetes
           </Button>
         </div>

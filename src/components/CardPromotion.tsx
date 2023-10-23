@@ -9,6 +9,7 @@ type CardPromotionProps = {
   image: string;
   width?: number;
   height?: number;
+  onClick?: () => void;
 }
 
 export default function CardPromotion({
@@ -16,10 +17,10 @@ export default function CardPromotion({
   paymentPlan,
   monthlyPrice,
   fullPrice,
-
   image,
   width,
-  height
+  height,
+  onClick
 }: CardPromotionProps) {
   return (
     <div className="bg-secondary h-full flex flex-col items-center rounded-lg shadow-lg p-4">
@@ -51,7 +52,7 @@ export default function CardPromotion({
           ou ${fullPrice} à vista
         `}</p>
 
-        <Button variant="primary">
+        <Button variant="primary" onClick={onClick}>
           Comprar agora
         </Button>
         <p className="text-sm font-normal pt-2">Compra 100% segura</p>
